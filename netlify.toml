@@ -1,6 +1,5 @@
 [build]
   command = "npm install"
-  publish = "build"
-
+  
 [functions]
   directory = "functions"
