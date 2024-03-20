@@ -7,6 +7,7 @@ const app = express();
 app.use(express.json());
 
 app.post('/webhook', async (req, res) => {
+  console.log('Received webhook:', req.body);
   const data = req.body;
   const incident_id = data.data?.incident?.id;
 
@@ -65,3 +66,8 @@ app.post('/webhook', async (req, res) => {
 });
 
 module.exports.handler = serverless(app);
+
+// const port = 3001; // Use any free port
+// app.listen(port, () => {
+//   console.log(`Server listening on http://localhost:${port}`);
+// });
