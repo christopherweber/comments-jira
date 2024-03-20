@@ -1,3 +1,6 @@
-command = "npm install"
-functions = "functions"
-publish = "build"
+[build]
+  command = "npm install"
+  publish = "build"
+
+[functions]
+  directory = "functions"
